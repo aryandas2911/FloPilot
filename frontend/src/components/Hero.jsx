@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from './ui/Button';
 
 const Hero = () => {
@@ -24,10 +25,12 @@ const Hero = () => {
                         The essential workspace for visualizing logic and streamlining operations with professional-grade clarity.
                     </p>
                     <div className="flex flex-wrap items-center gap-4">
-                        <Button variant="primary" className="group">
-                            Start Building
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </Button>
+                        <Link to="/dashboard">
+                            <Button variant="primary" className="group">
+                                Start Building
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                        </Link>
                         <Button variant="secondary">
                             View Demo
                         </Button>

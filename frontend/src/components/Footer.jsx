@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from './ui/Button';
 
 const Footer = () => {
@@ -13,7 +14,9 @@ const Footer = () => {
                     Join over 2,000+ architects and operations managers scaling their logic with FloPilot.
                 </p>
                 <div className="flex justify-center gap-4 mb-32">
-                    <Button variant="primary">Create Your First Flow</Button>
+                    <Link to="/dashboard">
+                        <Button variant="primary">Create Your First Flow</Button>
+                    </Link>
                     <Button variant="secondary">Talk to Sales</Button>
                 </div>
 

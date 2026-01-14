@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Button from './ui/Button';
 import logo from '../assets/logo.png';
 
@@ -33,8 +34,10 @@ const Navbar = () => {
 
                 {/* Actions */}
                 <div className="flex items-center gap-4">
-                    <button className="text-sm font-medium text-white hover:text-gray-300 transition-colors">Log In</button>
-                    <Button variant="primary" className="!py-2 !px-4 text-sm shadow-none hover:shadow-none">Get Started</Button>
+                    <Link to="/dashboard" className="text-sm font-medium text-white hover:text-gray-300 transition-colors">Log In</Link>
+                    <Link to="/dashboard">
+                        <Button variant="primary" className="!py-2 !px-4 text-sm shadow-none hover:shadow-none">Get Started</Button>
+                    </Link>
                 </div>
             </div>
         </nav>
